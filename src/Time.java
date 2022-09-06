@@ -1,9 +1,21 @@
 public class Time {
-    public static int Time(int h, int m, int s) {
-        return h*3600 + m*60 + s;
-    }
     public static void main (String [] args) {
+        int hour = 10;
+        int minute = 14;
+        int second = 30;
 
-        System.out.println(Time(14, 49, 30) + " seconds since midnight");
+        double SinceMidnight = hour * 3600 + minute * 60 + second;
+
+        System.out.println(SinceMidnight + " seconds since midnight");
+
+        double SecondsLeft = 86400 - SinceMidnight;
+
+        System.out.println(SecondsLeft + " seconds left in the day");
+
+        double PercentPassed = (SinceMidnight / 86400) * 100;
+
+        System.out.println(PercentPassed + "% of the day has passed");
+
+
     }
 }
